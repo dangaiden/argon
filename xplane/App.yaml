@@ -1,7 +1,12 @@
-apiVersion: example.crossplane.io/v1
-kind: App
+apiVersion: demo.example.org/v1alpha1
+kind: XWebApp
 metadata:
-  namespace: default
-  name: nginx-website
+  name: my-web
+  namespace: worldcup
 spec:
-  image: nginx
+  image: nginx:1.27
+  replicas: 2
+  ports: 80
+  crossplane:
+    compositionRef:
+      name: xwebapp-deployment
