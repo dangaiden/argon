@@ -2,6 +2,8 @@ apiVersion: apiextensions.crossplane.io/v2
 kind: CompositeResourceDefinition
 metadata:
   name: websites.platform.dangaiden.com
+  annotations:
+    argocd.argoproj.io/sync-wave: "0"
 spec:
   scope: Namespaced
   group: platform.dangaiden.com
