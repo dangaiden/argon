@@ -1,13 +1,13 @@
 apiVersion: apiextensions.crossplane.io/v2
 kind: CompositeResourceDefinition
 metadata:
-  name: apps.example.crossplane.io
+  name: websites.platform.dangaiden.com
 spec:
   scope: Namespaced
-  group: example.crossplane.io
+  group: platform.dangaiden.com
   names:
-    kind: App
-    plural: apps
+    kind: Website
+    plural: websites
   versions:
   - name: v1
     served: true

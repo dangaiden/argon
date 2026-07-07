@@ -1,16 +1,16 @@
 apiVersion: apiextensions.crossplane.io/v1
 kind: Composition
 metadata:
-  name: app-yaml
+  name: website-comp1
 spec:
   compositeTypeRef:
-    apiVersion: example.crossplane.io/v1
-    kind: App
+    apiVersion: platform.dangaiden.com/v1
+    kind: Website
   mode: Pipeline
   pipeline:
   - step: create-deployment-and-service
     functionRef:
-      name: crossplane-contrib-function-patch-and-transform
+      name: function-patch-and-transform
     input:
       apiVersion: pt.fn.crossplane.io/v1beta1
       kind: Resources
